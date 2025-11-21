@@ -11,19 +11,5 @@ namespace MDD4All.EMOF.DataModels.Base
 
         [JsonProperty(Order = -95)]
         public TemplateSignature? OwnedTemplateSignature { get; set; }
-
-        //[]
-        //public bool IsTemplate
-        //{
-        //    get
-        //    {
-        //        bool result = false;
-        //        if(OwnedTemplateSignature != null)
-        //        {
-        //            result = true;
-        //        }
-        //        return result;
-        //    }
-        //}
     }
 }

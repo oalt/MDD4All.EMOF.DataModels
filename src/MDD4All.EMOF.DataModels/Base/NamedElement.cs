@@ -1,9 +1,6 @@
 ﻿using MDD4All.EMOF.DataModels.Enumerations;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MDD4All.EMOF.DataModels.Base
 {

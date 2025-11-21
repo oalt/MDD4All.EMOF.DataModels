@@ -7,6 +7,8 @@ namespace MDD4All.EMOF.DataModels.Base
         [JsonIgnore]
         public Package? OwningPackage { get; set; }
 
+        private string? _namespace = null;
+
         [JsonProperty(Order = -97)]
         public string Namespace
         {
@@ -14,23 +16,37 @@ namespace MDD4All.EMOF.DataModels.Base
             {
                 string result = "";
 
-                if (OwningPackage != null)
+                if (_namespace != null)
                 {
-                    Package? currentPackage = OwningPackage;
+                    result = _namespace;
+                }
+                else
+                {
 
-                    while (currentPackage != null)
-                    {
-                        result = currentPackage.Name + "." + result;
-                        currentPackage = currentPackage.OwningPackage;
-                    }
 
-                    if (result.EndsWith("."))
+                    if (OwningPackage != null)
                     {
-                        result = result.Substring(0, result.Length - 1);
+                        Package? currentPackage = OwningPackage;
+
+                        while (currentPackage != null)
+                        {
+                            result = currentPackage.Name + "." + result;
+                            currentPackage = currentPackage.OwningPackage;
+                        }
+
+                        if (result.EndsWith("."))
+                        {
+                            result = result.Substring(0, result.Length - 1);
+                        }
                     }
                 }
 
                 return result;
+            }
+
+            set
+            {
+                _namespace = value;
             }
         }
 

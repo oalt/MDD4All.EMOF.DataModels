@@ -3,7 +3,5 @@
     public interface ITemplateableElement
     {
         TemplateSignature? OwnedTemplateSignature { get; set; }
-
-        //bool IsTemplate { get; }
     }
 }

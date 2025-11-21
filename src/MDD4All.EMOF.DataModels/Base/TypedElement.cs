@@ -1,24 +1,49 @@
-﻿using MDD4All.EMOF.DataModels.DataTypes;
-using Newtonsoft.Json;
-
-namespace MDD4All.EMOF.DataModels.Base
+﻿namespace MDD4All.EMOF.DataModels.Base
 {
     public abstract class TypedElement : NamedElement
     {
-        [JsonIgnore]
-        public Type? Type { get; set; }
-    
+        private string? _typeAsString = null;
+
         public string TypeRef
         {
             get
             {
                 string result = "";
-                if (Type != null)
+                if (_typeAsString != null)
                 {
-                    result = Type.FullName;
+                    result = _typeAsString;
                 }
+                
                 return result;
             }
+
+            set
+            {
+                _typeAsString = value;
+            }
         }
+
+        private string? _collectionTypeRef = null;
+
+        public string? CollectionTypeRef
+        {
+            get
+            {
+                string? result = null;
+                if (_collectionTypeRef != null)
+                {
+                    result = _collectionTypeRef;
+                }
+
+                return result;
+            }
+
+            set
+            {
+                _collectionTypeRef = value;
+            }
+        }
+
+
     }
 }
