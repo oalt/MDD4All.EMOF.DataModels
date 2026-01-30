@@ -9,5 +9,7 @@ namespace MDD4All.EMOF.DataModels
     {
         [JsonConverter(typeof(StringEnumConverter))]
         public PropertyKind Kind { get; set; } = PropertyKind.Property;
+
+        public string? DefaultValue { get; set; }
     }
 }
