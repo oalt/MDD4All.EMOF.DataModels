@@ -1,9 +1,13 @@
-﻿namespace MDD4All.EMOF.DataModels.Base
+﻿using MDD4All.DataModeling.Attributes;
+using MDD4All.EMOF.DataModels.DataTypes;
+
+namespace MDD4All.EMOF.DataModels.Base
 {
     public abstract class TypedElement : NamedElement
     {
         private string? _typeAsString = null;
 
+        [TypeReferenceTo(typeof(Type))]
         public string TypeRef
         {
             get
@@ -25,6 +29,7 @@
 
         private string? _collectionTypeRef = null;
 
+        [TypeReferenceTo(typeof(Type))]
         public string? CollectionTypeRef
         {
             get
