@@ -6,7 +6,7 @@ namespace MDD4All.EMOF.DataModels.Base
 {
     public abstract class Classifier : Type, ITemplateableElement
     {
-        [JsonProperty(Order = -98)]
+        [JsonProperty(Order = -97)]
         public bool IsAbstract { get; set; }
 
         [JsonProperty(Order = -95)]

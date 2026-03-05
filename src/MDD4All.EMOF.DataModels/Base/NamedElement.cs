@@ -10,7 +10,7 @@ namespace MDD4All.EMOF.DataModels.Base
         public string Name { get; set; } = string.Empty;
 
         [JsonConverter(typeof(StringEnumConverter))]
-        [JsonProperty(Order = -99)]
+        [JsonProperty(Order = -98)]
         public VisibilityKind Visibility { get; set; } = VisibilityKind.Public;
 
     }
