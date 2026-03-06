@@ -7,7 +7,7 @@ namespace MDD4All.EMOF.DataModels
     public class Class : Classifier
     {
         [TypeReferenceTo(typeof(Classifier))]
-        public List<string>? SuperClassRefs { get; set; }
+        public List<TypeReference>? SuperClassRefs { get; set; }
 
         public List<Property> OwnedAttributes { get; set; } = new List<Property>();
     }
