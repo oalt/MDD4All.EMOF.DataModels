@@ -8,6 +8,8 @@
 
         public bool IsUnique { get; set; }
 
+        public bool IsNullable { get; set; } = false;
+
         public string Multiplicity { get; set; } = "1";
     }
 }
