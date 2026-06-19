@@ -9,6 +9,8 @@
         <AssemblyName>$(MSBuildProjectName.Replace("-dev", ""))</AssemblyName>
         <SignAssembly>True</SignAssembly>
         <AssemblyOriginatorKeyFile>MDD4All_Github.snk</AssemblyOriginatorKeyFile>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     </PropertyGroup>
 
     <ItemGroup>
